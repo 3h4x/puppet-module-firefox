@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Firefox Web Browser
+Name[en_US]=Firefox Web Browser
+GenericName=Web Browser
+Exec=/opt/firefox/firefox %U
+Icon=/opt/firefox/icons/firefox.png
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;application/vnd.mozilla.xul+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;

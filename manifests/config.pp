@@ -1,0 +1,3 @@
+class firefox::config {
+
+}
