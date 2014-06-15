@@ -82,4 +82,3 @@ Check avaliable languages on mozilla website http://ftp.mozilla.org/pub/mozilla.
 ## Limitations
 
 Tested on debian
-~/github/puppet-module-firefox [master|✚ 1] 
