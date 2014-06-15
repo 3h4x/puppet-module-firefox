@@ -14,35 +14,72 @@ puppet-module-firefox
 
 ## Overview
 
-Installation of firefox on desktop. I use it on Debian with gnome-shell
+This module provide installation of firefox.
+It should work on any linux system because it use pre-compiled binary from mozilla.
 
 ## Module Description
 
+What it does is download tar.bz2 archive with firefox pre-compiled binary, extract it and create firefox.desktop.
+I use it on Debian with gnome-shell.
 
 ## Setup
 
 ### What firefox affects
 
-* Require maestrodev-wget
 * Download firefox and extract it
-* System icon and app launcher
+* Require maestrodev-wget
+* New system icon and app launcher
 
 ### Beginning with firefox
 
-The very basic steps needed for a user to get the module up and running.
-
-If your most recent release breaks compatibility or requires particular steps
-for upgrading, you may wish to include an additional section here: Upgrading
-(For an example, see http://forge.puppetlabs.com/puppetlabs/firewall).
+puppet module install h4x-firefox
 
 ## Usage
 
-  class { 'firefox':
+* you can start with just using defaults
+```
+   class { 'firefox': }
+```
+
+* version picking
+```
+  class { 'firefox:'
     version => '30.0',
   }
+```
+
+* architecture
+```
+   class { 'firefox:'
+      architecture => 'linux-x86_64',
+   }
+```
+For 64 bit
+```
+   class { 'firefox:'
+      architecture => 'linux-i686',
+   }
+```
+For 32 bit
+
+* language
+```
+  class { 'firefox:'
+    language => 'en_GB',
+  }
+```
+Check avaliable languages on mozilla website http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/latest/linux-x86_64/
+
+* installation directory
+```
+   class { 'firefox':
+      root_dir => '/opt/',
+   }
+```
 
 ## Reference
 
 ## Limitations
 
 Tested on debian
+~/github/puppet-module-firefox [master|✚ 1] 
