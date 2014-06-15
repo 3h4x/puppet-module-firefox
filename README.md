@@ -51,13 +51,13 @@ puppet module install h4x-firefox
 * architecture
 ```
    class { 'firefox:'
-      architecture => 'linux-x86_64',
+      architecture => 'x86_64',
    }
 ```
 For 64 bit
 ```
    class { 'firefox:'
-      architecture => 'linux-i686',
+      architecture => 'i686',
    }
 ```
 For 32 bit
@@ -73,7 +73,7 @@ Check avaliable languages on mozilla website http://ftp.mozilla.org/pub/mozilla.
 * installation directory
 ```
    class { 'firefox':
-      root_dir => '/opt/',
+      root_dir => '/opt',
    }
 ```
 
@@ -81,4 +81,4 @@ Check avaliable languages on mozilla website http://ftp.mozilla.org/pub/mozilla.
 
 ## Limitations
 
-Tested on debian
+All versions tested with docker on debian-wheezy and debian jessie.

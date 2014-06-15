@@ -12,14 +12,14 @@
 #   If absent removes firefox folder and links to it
 #
 # [*architecture*]
-#   Default linux-x86_64
-#   Choose 64 (linux-x86_64) or 32 (linux-i686)
+#   Default x86_64
+#   Choose x86_64 or i686
 #
 # [*language*]
 #   Default en-GB
 #   
 # [*root_dir*]
-#   Default /opt/firefox
+#   Default /opt
 #   Where to put firefox installation
 #
 # === Authors
@@ -39,7 +39,8 @@ class firefox(
   $root_dir         = $firefox::params::root_dir,
   $extra_parameters = undef,
 ) inherits firefox::params {
-  validate_re($::osfamily, '^(Debian|Ubuntu)$', 'This module was tested on Debian and Ubuntu only. Moar to come')
+  validate_re($::kernel, '^Linux$', 'This module will work only on linux. Moar to come')
+  validate_re($firefox::architecture, '^(x86_64|i686)$', 'Invalid architecture, choose x86_64 or i686')
 
   class { 'firefox::install': } ->
   class { 'firefox::config':  } ->

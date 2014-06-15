@@ -8,5 +8,5 @@ class firefox::params {
   $ensure           = present
   $language         = 'en-GB'
   $root_dir         = '/opt'
-  $architecture     = 'linux-x86_64'
+  $architecture     = $::hardwaremodel
 }

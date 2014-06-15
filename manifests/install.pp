@@ -3,7 +3,7 @@
 class firefox::install inherits firefox::params {
   ensure_packages(['wget', 'bzip2'])
   wget::fetch { 'firefox download':
-    source      => "http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${firefox::version}/${firefox::architecture}/${firefox::language}/firefox-${firefox::version}.tar.bz2",
+    source      => "http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${firefox::version}/linux-${firefox::architecture}/${firefox::language}/firefox-${firefox::version}.tar.bz2",
     destination => "${firefox::root_dir}/firefox-${firefox::version}.tar.bz2",
   }  
 
