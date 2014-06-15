@@ -1,12 +1,12 @@
 {
   "name": "h4x/firefox",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "h4x",
   "summary": "Firefox installer",
   "license": "Apache 2.0",
-  "source": "https://github.com/e1337h4xx/puppet-module-firefox",
-  "project_page": "https://github.com/e1337h4xx/puppet-module-firefox",
-  "issues_url": "https://github.com/e1337h4xx/puppet-module-firefox/issues",
+  "source": "https://github.com/3h4x/puppet-module-firefox",
+  "project_page": "https://github.com/3h4x/puppet-module-firefox",
+  "issues_url": "https://github.com/3h4x/puppet-module-firefox/issues",
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
