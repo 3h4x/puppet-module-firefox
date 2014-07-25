@@ -1,8 +1,8 @@
 {
   "name": "h4x/firefox",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "h4x",
-  "summary": "Firefox pre-compiled binary installer",
+  "summary": "Firefox pre-compiled binary installer for Linux and Mac",
   "license": "Apache 2.0",
   "source": "https://github.com/3h4x/puppet-module-firefox",
   "project_page": "https://github.com/3h4x/puppet-module-firefox",

@@ -40,6 +40,17 @@ class firefox(
   $extra_parameters = undef,
 ) inherits firefox::params {
   validate_re($::kernel, '^Linux$', 'This module will work only on linux. Moar to come')
+#  case $::kernel {
+#    'Linux': {
+#    }
+#    'Darwin': {
+#      notice { 'mmm':
+#        message => "mac rider here $::kernel",
+#        
+#      }
+#    }
+#  }
+
   validate_re($firefox::architecture, '^(x86_64|i686)$', 'Invalid architecture, choose x86_64 or i686')
 
   class { 'firefox::install': } ->
