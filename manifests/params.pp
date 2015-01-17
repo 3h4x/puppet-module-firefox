@@ -4,7 +4,7 @@
 #
 
 class firefox::params {
-  $version          = '34.0.5'
+  $version          = '35.0'
   $ensure           = present
   $language         = 'en-GB'
   $root_dir         = '/opt'

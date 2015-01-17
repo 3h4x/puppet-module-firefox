@@ -1,6 +1,6 @@
 {
   "name": "h4x/firefox",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "author": "h4x",
   "summary": "Firefox pre-compiled binary installer for Linux",
   "license": "Apache 2.0",
