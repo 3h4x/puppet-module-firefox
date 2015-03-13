@@ -5,7 +5,7 @@ class firefox::install inherits firefox::params {
   wget::fetch { 'firefox download':
     source      => "http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${firefox::version}/linux-${firefox::architecture}/${firefox::language}/firefox-${firefox::version}.tar.bz2",
     destination => "${firefox::root_dir}/firefox-${firefox::version}.tar.bz2",
-  }  
+  }
 
   exec { 'make firefox dir':
     command => "mkdir /opt/firefox-${firefox::version}",
@@ -26,7 +26,7 @@ class firefox::install inherits firefox::params {
 #    cwd     => $firefox::root_dir,
 #    path    => ['/bin/', '/usr/bin'],
 #  }
-  
+
   file { 'symlink firefox':
     ensure => link,
     path   => '/opt/firefox/',
@@ -38,14 +38,14 @@ class firefox::install inherits firefox::params {
     source  => 'puppet:///modules/firefox/firefox.desktop',
     require => File['symlink firefox'],
   }
-  
-  file { "/opt/firefox/icons/firefox.png":
+
+  file { '/opt/firefox/icons/firefox.png':
     ensure  => present,
     source  => 'puppet:///modules/firefox/firefox.png',
     require => File['symlink firefox'],
   }
 
-Wget::Fetch['firefox download'] -> 
+Wget::Fetch['firefox download'] ->
 Exec['make firefox dir'] ->
 Exec['extract firefox'] ->
 File['symlink firefox'] ->
