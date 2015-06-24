@@ -3,7 +3,7 @@
 # Defaut parameter values for the firefox module
 #
 
-class firefox::params {
+class firefox::params inherits firefox::dependencies {
   $version          = '37.0.2'
   $ensure           = present
   $language         = 'en-GB'
