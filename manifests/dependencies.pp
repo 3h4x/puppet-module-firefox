@@ -24,7 +24,7 @@ class firefox::dependencies {
         source  => 'puppet:///modules/firefox/epll-preview.repo',
         require => File['/etc/pki/rpm-gpg/RPM-GPG-KEY-lambda-epll'],
       }
-      package { 'firfox-compat':
+      package { 'firefox-compat':
         ensure  => installed,
         require => File['/etc/yum.repos.d/epll.repo'],
       }
